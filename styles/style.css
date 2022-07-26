@@ -6,3 +6,264 @@ Green: #00B172
 White: #FFF
 
 */
+
+:root {
+    --text: #1A1A1A;
+    --verde: #00B172;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; /** 1REM = 10pX **/
+    /* box-sizing: border-box;
+    margin: 0;
+    padding: 0; */
+} 
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Nav-bar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    font-size: 1.4rem;
+
+}
+
+.brand-title img{
+    margin: .5rem;
+    width: 14rem;
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+
+}
+
+.navbar-links li:hover{
+    background-color: var(--verde);
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+    padding: 3rem;
+}
+
+/* Toggle Button */
+
+.toggle-button{
+    position: absolute;
+    top: 2rem;
+    right: 1.6rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3rem;
+    height: 2.1rem;
+}
+
+.toggle-button .bar{
+    height: .3rem;
+    width: 100%;
+    background-color: var(--verde);
+    border-radius: 1rem;
+}
+
+
+
+
+/* Hero Banner */
+
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/landing.jpg");
+    height: 80vh;
+    background-position: center;
+    align-self: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+
+.hero:hover{
+    background-image: url(https://static.wixstatic.com/media/d33fc4_069b53667d5a4b3d8768cc644e3d5381~mv2.gif);
+    transition-property: background-image;
+    transition-duration: 1s;
+    transition-timing-function:linear;
+    transition-delay: 1s;
+}
+      
+.text-hero {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    
+}
+
+/* Sections */
+
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news h2{
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: var(--verde) solid .5rem;
+    /* background-color: aqua; */
+    width: fit-content;
+}
+
+.articles{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5rem 2rem 7rem 2rem;
+}
+
+.articles img{
+    width: 15rem;
+}
+
+
+.article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article h3{
+    font-size: 2rem;
+    color: var(--verde);
+    font-weight: bold;
+}
+
+.article p{
+    font-size: 2rem;
+    color: var(--text);
+    font-weight: 100;
+    text-align: center;
+}
+
+
+/* Second section */
+
+#green-area{
+    background-color: var(--verde);
+    width: 100vw;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#green-area h2{
+    color: #fff;
+    font-size: 3.5rem;
+    border-bottom: #fff solid 0.5rem;
+}
+
+#green-area h3{
+    color: #fff;
+    font-size: 3rem;
+}
+
+#green-area p{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.copy-block{
+    width: 26%;
+}
+
+.spotify-logo{
+    width: 12rem;
+    height: 100%;
+    /* position: relative;
+    left: 47%;
+    top: 250px; */
+
+}
+
+
+.spotify-app{
+    width: 340px;
+    /* position: relative;
+    left: 55%; */
+    margin: 5rem;
+}
+
+
+
+/* Media Queris */
+
+@media (max-width:800px){
+    #green-area{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:560px) {
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li{
+        text-align: center;
+    }
+
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
